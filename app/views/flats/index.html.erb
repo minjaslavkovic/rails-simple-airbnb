@@ -1,0 +1,28 @@
+<h2>Simple Airbnb</h2>
+<br>
+<p>
+<%= link_to 'Add Flat', new_flat_path(@flat) %>
+</p>
+<br>
+<br>
+
+<% @flats.each do |flat| %>
+<div class="card">
+
+  <img src="https://source.unsplash.com/random/200x200" alt="">
+
+  <div class="card-info">
+    <%= flat.name %>
+    <br>
+    <%= flat.address %>
+    <br>
+    <%= flat.number_of_guests %>
+    <br>
+    <%= flat.price_per_night %>
+  </div>
+
+</div>
+
+  <br>
+  <br>
+<% end %>
